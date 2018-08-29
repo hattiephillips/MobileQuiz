@@ -14,30 +14,32 @@
     }).addTo(mymap);
 	
 //Custom Icons
-//my icon=purple
+//my icon=pink
 var testMarkerPink = L.AwesomeMarkers.icon({
-icon: 'blue',
-markerColor: 'purple'
+icon: 'play',
+markerColor: 'pink'
 });
 //close icons =green
-var testMarkerPink = L.AwesomeMarkers.icon({
+var testMarkerGreen = L.AwesomeMarkers.icon({
 icon: 'play',
 markerColor: 'green'
 });
 //far icons =red
-var testMarkerPink = L.AwesomeMarkers.icon({
+var testMarkerRed = L.AwesomeMarkers.icon({
 icon: 'play',
 markerColor: 'red'
 });
 //all others =grey
-var testMarkerPink = L.AwesomeMarkers.icon({
+var testMarkerGrey = L.AwesomeMarkers.icon({
 icon: 'play',
 markerColor: 'grey'
 });
 
+var current_position
+
 //Function for showing user on the map or saying error
-function onLocationFound(e)[{
-	if (current position) {
+function onLocationFound(e){
+	if (current_position) {
 		mymap.removelayer(current_position);
 	}
 	current_position=L.marker(e.latlng,{icon:testMarkerPink}).addTo(mymap)
@@ -46,9 +48,9 @@ function onLocationFound(e)[{
 function onLocationError(e){
 	alert(e.message);
 }
-map.on('locationfound', onLocationFound);
+mymap.on('locationfound', onLocationFound);
 mymap.on('locationerror', onLocationError);
-}
+
 
 //call location every 5 seconds- ongoing
 setInterval(locate,5000)
