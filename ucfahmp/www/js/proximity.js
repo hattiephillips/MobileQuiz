@@ -7,6 +7,20 @@ function proximity (){
 qProximity(app_array);
 }
 
+// create a custom popup
+var popup = L.popup();
+// create an event detector to wait for the user's click event and then use the popup to show them
+where they clicked
+// note that you don't need to do any complicated maths to convert screen coordinates to real world
+coordiantes - the Leaflet API does this for you
+function onMapClick(e) {
+popup
+.setLatLng(e.latlng)
+.setContent("You clicked the map at " + e.latlng.toString())
+.openOn(mymap);
+}
+// now add the click event detector
+
 function qProximity(any_array) {
 	myPos=current_position.getLatLng();
 	for (var i=0, i<any_array.length; i++) {
