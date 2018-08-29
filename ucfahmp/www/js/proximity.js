@@ -3,10 +3,6 @@
 //proimity= https://www.sitepoint.com/introducing-proximity-api/
 //proximity= https://gist.github.com/icodejs/2644255
 
-function proximity (){
-qProximity(app_array);
-}
-
 // create a custom popup
 var popup = L.popup();
 // create an event detector to wait for the user's click event and then use the popup to show them
@@ -18,6 +14,11 @@ popup
 .setLatLng(e.latlng)
 .setContent("You clicked the map at " + e.latlng.toString())
 .openOn(mymap);
+
+function proximity (){
+qProximity(app_array);
+}
+
 }
 // now add the click event detector
 
