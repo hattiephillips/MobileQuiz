@@ -18,6 +18,8 @@
       maxZoom: 18,
 
       id: 'mapbox.streets'
+
+    }).addTo(mymap);
 	
 //Custom Icons
 //my icon=pink
