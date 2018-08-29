@@ -48,7 +48,7 @@ var current_position
 //Function for showing user on the map or saying error
 function onLocationFound(e){
 	if (current_position) {
-		mymap.removelayer(current_position);
+		mymap.removeLayer(current_position);
 	}
 	current_position=L.marker(e.latlng,{icon:testMarkerPink}).addTo(mymap)
 }
