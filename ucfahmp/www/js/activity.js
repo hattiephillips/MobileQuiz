@@ -5,7 +5,7 @@
 function getQuestion() {
 	client=new XMLRequest();
 	
-	client.open('GET','http://developer.cege.ucl.ac.uk:30287/');
+	client.open('GET','http://developer.cege.ucl.ac.uk:30287/getGeoJSON');
 	client.onreadystatechange=questionResponse;
 	client.send();
 }
